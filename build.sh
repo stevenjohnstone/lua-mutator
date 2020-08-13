@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-git submodule update --init --recursive
+[ -d m4 ] || git submodule update --init --recursive
 autoreconf -f -i
 ./configure
 make
